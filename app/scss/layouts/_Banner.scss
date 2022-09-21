@@ -296,10 +296,16 @@
 
         }
     }
-    .scroll_to_portolio{
+    .scroll_to_portfolio{
         position: absolute;
         bottom: u.rem(100);
         right: u.rem(60);
+        animation-name: scroll-to-port;
+        animation-fill-mode: forwards;
+        animation-duration: 2s;
+        transition: 250ms;
+        transform: translateY(u.rem(100));
+        opacity: 0;
         @include u.breakpoint(small) {
             right: u.rem(150);
 
@@ -331,7 +337,8 @@
                 background: var(--primary-white);
                 transform: translateY(0);
                 animation-name: mouse;
-                animation-duration: 1s;
+                animation-duration: .5s;
+                animation-delay: 1s;
                 animation-timing-function: linear;
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
@@ -349,6 +356,16 @@
             }
         }
         
+    }
+    @keyframes scroll-to-port {
+        from{
+            transform: translateY(u.rem(100));
+            opacity: 0;
+        }
+        to{
+            transform: translateY(u.rem(0));
+            opacity: 1;
+        }
     }
     
 
