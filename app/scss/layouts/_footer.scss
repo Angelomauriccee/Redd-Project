@@ -1,0 +1,97 @@
+@use '../util/' as u;
+
+footer{
+    background: #111;
+    width: 100%;
+    min-height: 50vh;
+    .footer__container{
+        width: min(90%, 90rem);
+        max-width: u.rem(900);
+        margin: 0 auto;
+        @include u.breakpoint(mid-large){
+            display: flex;
+            gap: u.rem(30);
+        }
+        h4{
+            color: var(--primary-white);
+            margin: u.rem(30) auto;
+        }
+        p{
+            padding: u.rem(10) auto;
+            font-size: clamp(u.rem(14), u.rem(8) + 1vw ,u.rem(15));
+            color: rgba(255, 255, 255, 0.425);
+            line-height: u.rem(30);
+            font-weight: 300;
+        }
+        .brief{
+            padding: u.rem(10) auto;
+            margin: 0 auto;
+            width: min(90%, 90rem);
+            h2{
+                text-align: center;
+                padding-top: u.rem(30);
+                padding-bottom: u.rem(30);
+                font-family: var(--font-style-custom);
+                color: var(--main-color);
+                font-size: clamp(u.rem(35), u.rem(8) + 1vw ,u.rem(30));
+                @include u.breakpoint(mid-medium){
+                    text-align: left;
+                }
+            }
+        }
+        .notification-box{
+            width: min(90%, 90rem);
+            margin: 0 auto;
+            h4{
+                @include u.breakpoint(mid-large){
+                    text-align: right;
+                }
+            }
+            form{
+                padding: u.rem(30) 0;
+                input{
+                    display: block;
+                    outline: none;
+                    border: none;
+                    background-color: rgba(0, 0, 0, 0.1);
+                    width: 100%;
+                    font-size: u.rem(13);
+                    padding: u.rem(15);
+                    color: var(--primary-white);
+                    text-align: center;
+                }
+                input::placeholder{
+                    color: rgba(255, 255, 255, 0.425);
+                    letter-spacing: u.rem(1);
+                }
+                button{
+                    margin-top: u.rem(10);
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    font-size: u.rem(12);
+                    text-transform: uppercase;
+                    font-family: var(--font-style-custom);
+                    letter-spacing: u.rem(2);
+                    background: var(--main-color);
+                    color: var(--primary-white);
+                    padding: u.rem(15);
+                }
+            }
+        }
+    }
+    .copyright{
+        text-align: center;
+        font-size: u.rem(11);
+        padding: u.rem(20) 0;
+        color: rgba(255, 255, 255, 0.425);
+        a{
+            color: var(--main-color);
+            transition: 250ms;
+        }
+        a:hover{
+            color: var(--primary-white);
+        }
+    }
+}

@@ -1,0 +1,186 @@
+@use '../util/' as u;
+
+.contact_section{
+    margin-top: 200px;
+    background: linear-gradient(rgba(4,9,30,0.627),rgba(4, 9, 30, 0.627)), url(/Images/projects/email-background.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    background-attachment: fixed;
+    .contact_head{
+            width: min(90%, 90rem);
+            margin: 0 auto;
+            text-align: center;
+            padding: u.rem(100) 0;
+            h4{
+                font-family: var(--font-style-custom);
+                letter-spacing: u.rem(1);
+                font-size: clamp(u.rem(13), u.rem(8) + 1vw ,u.rem(30));
+                font-weight: 700;
+                color: var(--main-color);
+                text-transform: uppercase;
+            }
+            h1{
+            font-family: var(--font-style-custom);
+            text-transform: capitalize;
+            font-size: clamp(u.rem(20), u.rem(20) + 2vw ,u.rem(50));
+            position: relative;
+            text-transform: capitalize;
+            color: var(--primary-white);
+            }
+    }
+    .contact{
+        background: rgba(0, 0, 0, 0.384);
+        width: min(80%, 80rem);
+        height: max-content;
+        margin: 0 auto;
+        overflow: hidden;
+        @include u.breakpoint(large){
+            display: flex;
+            justify-content: flex-end;
+            place-content: center;
+            gap: u.rem(30);
+            padding-top: u.rem(50);
+            padding-bottom: u.rem(50);
+            padding-left: u.rem(100);
+
+        }
+        h5{
+            color: var(--main-color);
+            padding-top: u.rem(50);
+            text-transform: capitalize;
+            font-size: u.rem(16);
+            @include u.breakpoint(large){
+                padding: u.rem(0);
+            }
+        }
+        &__form{
+            width: min(80%, 80rem);
+            margin: 0 auto;
+            @include u.breakpoint(large){
+                width: 100%;
+            }
+            input{
+                display: block;
+                outline: none;
+                border: none;
+                border-bottom: u.rem(1) solid rgba(255, 255, 255, 0.25);
+                background: transparent;
+                width: u.rem(100);
+                color: var(--primary-white);
+                font-size: clamp(u.rem(14), u.rem(8) + 1vw ,u.rem(16));
+                margin: u.rem(50) 0;
+                padding-bottom: u.rem(20);
+                transition: 250ms;
+            }
+            input::placeholder{
+                color: rgba(255, 255, 255, 0.25);
+            }
+            input:focus,
+            input:active{
+                width: 100%;
+                border-bottom: u.rem(1) solid var(--main-color);
+            }
+            textarea{
+                display: block;
+                outline: none;
+                border: none;
+                border-bottom: u.rem(1) solid rgba(255, 255, 255, 0.25);
+                font-size: clamp(u.rem(14), u.rem(8) + 1vw ,u.rem(16));     
+                background: transparent;
+                width: 30%;
+                resize: horizontal;
+                color: var(--primary-white);
+                transition: 250ms;
+            }
+            textarea:focus,
+            textarea:active{
+                width: 100%;
+                border-bottom: u.rem(1) solid var(--main-color);
+            }
+            textarea::placeholder{
+                color: rgba(255, 255, 255, 0.25);
+            }
+            button{
+                margin-top: u.rem(50);
+                font-size: clamp(u.rem(13), u.rem(8) + .5vw ,u.rem(16));  
+                letter-spacing: u.rem(3); 
+                font-family: var(--font-style-custom);
+                padding: u.rem(10);
+                width: 100%;
+                background: var(--main-color);
+                outline: none;
+                border: none;
+                color: var(--primary-white);
+                cursor: pointer;
+            }
+        }
+        &__info{
+            width: min(80%, 80rem);
+            margin: 0 auto;
+            padding: u.rem(50) 0;
+            text-align: center;
+            @include u.breakpoint(mid-medium){
+                text-align: left;
+            }
+            @include u.breakpoint(large){
+                width: 100%;
+                padding: 0;
+                background: rgba(0, 0, 0, 0.795);
+                margin-top: u.rem(-50);
+                padding-top: u.rem(50);
+                padding-left: u.rem(50);
+                padding-bottom: 0;
+            }
+            h5{
+                font-size: u.rem(16);
+                color: var(--primary-white);
+                padding-left: u.rem(0);
+            }
+            .contact__details{
+                margin: u.rem(50) 0;
+                h5{
+                    color: var(--main-color);
+                    margin: u.rem(5) 0;
+                    padding-left: u.rem(0);
+                }
+                p{
+                    color: rgba(255, 255, 255, 0.733);
+                    font-weight: 300;
+                    letter-spacing: u.rem(1);
+                    font-size: u.rem(10);
+                    text-transform: capitalize;
+                    @include u.breakpoint(super-small){
+                        font-size: u.rem(16);
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    .contact_icons{
+        margin: 0 auto;
+        display: grid;
+        justify-content: center;
+        @include u.breakpoint(mid-medium){
+            justify-content: left;
+        }
+        ul{
+            display: flex;
+            gap: u.rem(30);
+            li{
+                font-size: clamp(u.rem(16), u.rem(8) + .5vw ,u.rem(20));  
+            }
+            a{
+                color: var(--primary-white);
+                transition: 250ms;
+            }
+        }
+        ul a:hover{
+            color: var(--main-color);
+        }
+    }
+
+}

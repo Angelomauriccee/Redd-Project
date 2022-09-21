@@ -1,0 +1,26 @@
+@use 'sass:math';
+@function rem($pixel) {
+    //divide pixel by 16 to return rem for responsive typography
+    //we want to divide any pixel by 16
+    //throw an error if the pixel has a unit
+    //if pixel has a unit, throw an error else divide pixel by 16 or runs the program
+    //@return math.div($pixel, 16) + 30rem ; 
+    @if math.is-unitless($pixel) {
+      @return math.div($pixel, 16) + rem;
+    }
+    @else{
+        @error 'Do not use the unit when using the rem function; only numbers' 
+    }
+   
+}
+
+@function em($pixel) {
+    
+    @if math.is-unitless($pixel) {
+      @return math.div($pixel, 16) + em;
+    }
+    @else{
+        @error 'Do not use the unit when using the em function; only numbers' 
+    }
+   
+}

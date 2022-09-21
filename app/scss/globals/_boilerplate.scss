@@ -1,0 +1,28 @@
+//This contains links and everything for starters
+html{
+    box-sizing: border-box;
+    font-size: 100%;  
+    scroll-behavior: smooth;
+    // also known as default
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "poppins";
+    overflow-x: hidden;
+    background-color: #e6e6e6;
+}
+body.fixed{
+    overflow: hidden;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style-type: none;
+}

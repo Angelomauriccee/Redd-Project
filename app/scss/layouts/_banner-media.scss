@@ -1,0 +1,25 @@
+@use '../util/' as u;
+//hero-container, hero, button
+.hero-container{
+    @include u.breakpoint(small) {
+        display: flex;
+        align-items: center;
+        gap: u.rem(0);
+    }
+    .hero{
+        @include u.breakpoint(small) {
+            text-align: left;
+            width: min(100% - u.rem(140), u.rem(1000));
+        } 
+        
+        // &__button{
+
+        // }
+            button{
+                @include u.breakpoint(small) {
+                    margin-inline-end: u.rem(0);
+                    max-width: u.rem(250);
+                } 
+            }
+    }
+}

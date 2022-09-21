@@ -1,0 +1,17 @@
+@use '../util/' as u;
+
+.sponsors__section{
+    width: 100vw;
+    background: #111111fd;
+    height: 60vh;
+    position: absolute;
+
+.sponsor{
+    .sponsor__head{
+        width: min(90%, 90rem);
+        margin: 0 auto;
+        text-align: center;
+        padding-top: u.rem(150);
+    }
+}
+}

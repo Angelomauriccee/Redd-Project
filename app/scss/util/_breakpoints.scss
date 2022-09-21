@@ -1,0 +1,35 @@
+//768px,1024px,1440px
+//700px, 900px, 1440px coder coder
+//501px
+//import functions for converting em
+@use 'functions' as f;
+//this is the map function
+$breakpoints-up: (
+    "super-small":f.em(460),
+    "small":f.em(500),
+    "mid-medium":f.em(601),
+    "medium": f.em(768),
+    "mid-large":f.em(900),
+    "large": f.em(1024),
+    "Xlarge": f.em(1440),
+);
+
+//for max-width
+//767.8px, 1,023.8px, 1439.98px
+//699.98px, 899.98px, 1439.98px coder coder
+// $breakpoints-down: (
+//     "small": 43.7485em,
+//     "medium": 56.24875em,
+//     "large": 89.99875em,
+// );
+
+//TOadd mixin
+//inside are the code its gonna generate whenever you using it
+//use map-get to get the breakpoints
+//the $size lets you choose any of the breakpoints name when using it in your scss
+@mixin breakpoint($size) {
+    @media screen and (min-width: map-get($breakpoints-up, $size)){
+        @content;
+        //this loads all the style rule in the mixin when using it
+    }
+}
