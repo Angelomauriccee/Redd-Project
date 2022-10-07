@@ -1,12 +1,13 @@
 //preloader
 
 $(window).on("load",function(){
-    $("document").ready($(".loader-wrapper").fadeOut("slow"));
+    $(".loader-wrapper").fadeOut("slow");
     ( $("body").removeClass("preload") ); ( $(window).on("load", function() {load}));
 });
 
 
 
+//$("document").ready($(".loader-wrapper").fadeOut("slow")); for dom loading 
 
 
 
