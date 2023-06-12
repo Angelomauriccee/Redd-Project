@@ -14,12 +14,13 @@ html{
 }
 body{
     font-family: "poppins";
-    overflow-x: hidden;
     background-color: #e6e6e6;
-}
-body.fixed{
     overflow: hidden;
 }
+.preload.remove{
+    overflow-y: visible ;
+}
+
 a{
     text-decoration: none;
 }

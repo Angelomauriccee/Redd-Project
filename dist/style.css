@@ -14,12 +14,12 @@ html {
 
 body {
   font-family: "poppins";
-  overflow-x: hidden;
   background-color: #e6e6e6;
+  overflow: hidden;
 }
 
-body.fixed {
-  overflow: hidden;
+.preload.remove {
+  overflow-y: visible;
 }
 
 a {
@@ -60,7 +60,6 @@ li {
   font-size: 1.625rem;
   font-family: "sansation";
   position: relative;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -91,7 +90,6 @@ li {
   right: 1.625rem;
   top: 1.25rem;
   z-index: 99999;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
@@ -124,30 +122,15 @@ li {
   font-size: 0.8125rem;
   letter-spacing: 0.1875rem;
   margin-bottom: 2.5rem;
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
 }
 .Banner__header .mobile_navigation .menu-fade-in {
-  -webkit-animation: menu-fade;
-          animation: menu-fade;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: menu-fade;
+  animation-duration: 0.5s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
   opacity: 0;
-}
-@-webkit-keyframes menu-fade {
-  from {
-    opacity: 0;
-    transform: translateX(3.125rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0rem);
-  }
 }
 @keyframes menu-fade {
   from {
@@ -177,18 +160,6 @@ li {
 }
 .Banner__header .mobile_navigation .nav_links li a:hover {
   color: var(--main-color);
-}
-@-webkit-keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(3.125rem);
-    transition: 0.5s ease;
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0rem);
-    transition: 0.5s ease;
-  }
 }
 @keyframes navLinkFade {
   from {
@@ -224,18 +195,6 @@ li {
 .Banner__header .mobile_navigation .social-icons li a :hover {
   color: var(--main-color);
 }
-@-webkit-keyframes iconsLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(3.125rem);
-    transition: 0.5s ease;
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0rem);
-    transition: 0.5s ease;
-  }
-}
 @keyframes iconsLinkFade {
   from {
     opacity: 0;
@@ -260,14 +219,10 @@ li {
   font-weight: 400;
 }
 .Banner__header .mobile_navigation .menu-paragraph-fade-in {
-  -webkit-animation: menu-fade;
-          animation: menu-fade;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 1.4s;
-          animation-delay: 1.4s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: menu-fade;
+  animation-duration: 0.5s;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
   opacity: 0;
 }
 .Banner__header .mobile_navigation.mobile-nav {
@@ -331,7 +286,7 @@ li {
   bottom: 0;
   -webkit-clip-path: circle(7.9% at 50% 50%);
   clip-path: circle(7.9% at 50% 50%);
-  background: hsla(0deg, 0%, 100%, 0.575);
+  background: hsla(0, 0%, 100%, 0.575);
   z-index: -1;
 }
 @supports (inset: 0 0 0 0) {
@@ -379,12 +334,9 @@ li {
   position: absolute;
   bottom: 6.25rem;
   right: 3.75rem;
-  -webkit-animation-name: scroll-to-port;
-          animation-name: scroll-to-port;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  animation-name: scroll-to-port;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
   transition: 250ms;
   transform: translateY(6.25rem);
   opacity: 0;
@@ -421,30 +373,16 @@ li {
   left: 0.5rem;
   background: var(--primary-white);
   transform: translateY(0);
-  -webkit-animation-name: mouse;
-          animation-name: mouse;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-direction: alternate;
-          animation-direction: alternate;
+  animation-name: mouse;
+  animation-duration: 0.5s;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 @supports (aspect-ratio: 1) {
   .Banner .scroll_to_portfolio .mouse-pad .mouse::before {
     aspect-ratio: 1;
-  }
-}
-@-webkit-keyframes mouse {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(1.25rem);
   }
 }
 @keyframes mouse {
@@ -453,16 +391,6 @@ li {
   }
   100% {
     transform: translateY(1.25rem);
-  }
-}
-@-webkit-keyframes scroll-to-port {
-  from {
-    transform: translateY(6.25rem);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0rem);
-    opacity: 1;
   }
 }
 @keyframes scroll-to-port {
@@ -745,7 +673,7 @@ article .services .services__grid .services_grid_content p {
   bottom: 0;
   right: 0;
   color: var(--primary-white);
-  background: hsla(0deg, 0%, 0%, 0.6);
+  background: hsla(0, 0%, 0%, 0.6);
   transition: 300ms ease-out;
   opacity: 0;
 }
@@ -789,7 +717,7 @@ article .services .services__grid .services_grid_content p {
   bottom: 0;
   -webkit-clip-path: circle(1.9% at 50% 50%);
   clip-path: circle(1.9% at 50% 50%);
-  background: hsla(0deg, 0%, 100%, 0.575);
+  background: hsla(0, 0%, 100%, 0.575);
   z-index: -1;
 }
 .projects__container .projects__grid .grid__contents .caption__links button:hover::before {
@@ -802,7 +730,7 @@ article .services .services__grid .services_grid_content p {
   position: absolute;
   width: 0.0625rem;
   height: 2.875rem;
-  background-color: hsla(0deg, 0%, 100%, 0.575);
+  background-color: hsla(0, 0%, 100%, 0.575);
   top: -3.125rem;
   left: 1.03125rem;
 }
@@ -1135,7 +1063,6 @@ article .services .services__grid .services_grid_content p {
 .contact_section .contact {
   background: rgba(0, 0, 0, 0.384);
   width: min(80%, 80rem);
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   margin: 0 auto;
@@ -1188,9 +1115,6 @@ article .services .services__grid .services_grid_content p {
 .contact_section .contact__form input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.25);
 }
-.contact_section .contact__form input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.25);
-}
 .contact_section .contact__form input::placeholder {
   color: rgba(255, 255, 255, 0.25);
 }
@@ -1217,9 +1141,6 @@ article .services .services__grid .services_grid_content p {
   border-bottom: 0.0625rem solid var(--main-color);
 }
 .contact_section .contact__form textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.25);
-}
-.contact_section .contact__form textarea:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.25);
 }
 .contact_section .contact__form textarea::placeholder {
@@ -1382,10 +1303,6 @@ footer .footer__container .notification-box form input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.425);
   letter-spacing: 0.0625rem;
 }
-footer .footer__container .notification-box form input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.425);
-  letter-spacing: 0.0625rem;
-}
 footer .footer__container .notification-box form input::placeholder {
   color: rgba(255, 255, 255, 0.425);
   letter-spacing: 0.0625rem;
@@ -1435,6 +1352,50 @@ footer .copyright a:hover {
 }
 .Banner__header .mobile_navigation .nav_links .link6-intersect {
   color: var(--main-color);
+}
+
+.preloader {
+  background-color: red;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  transition: 0.5s;
+  z-index: 100000000000000000000000000000;
+  display: grid;
+  place-content: center;
+}
+.preloader__outer {
+  position: relative;
+  width: 1.875rem;
+  height: 1.875rem;
+  border: 5px solid white;
+  border-radius: 6.25rem;
+  overflow: hidden;
+}
+.preloader__outer::before {
+  top: 0;
+  left: 0;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation-name: preload;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes preload {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.preloader.remove {
+  visibility: hidden;
+  opacity: 0;
 }
 
 .cS-hidden {

@@ -1,8 +1,10 @@
 //preloader
 
-$(window).on("load",function(){
-    $(".loader-wrapper").fadeOut("slow");
-    ( $("body").removeClass("preload") ); ( $(window).on("load", function() {load}));
+const preloader = document.querySelector(".preloader");
+const body = document.querySelector(".preload");
+window.addEventListener ("load", () => {
+    preloader.classList.add("remove")
+    body.classList.add("remove")
 });
 
 
